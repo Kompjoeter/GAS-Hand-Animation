@@ -1,0 +1,190 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    overflow: hidden;
+}
+
+#svg-container
+{
+    height: 100vh;
+}
+
+#svg-hand
+{
+    animation-name: hand-down, hand-up;
+    animation-duration: 1.5s, 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s, 2.1s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: border-box;
+}
+
+#hand
+{
+    animation-name: hand-rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#thumb
+{
+    animation-name: thumb-twist;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#index-finger
+{
+    animation-name: index-twist;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#middle-finger
+{
+    animation-name: middle-twist;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#ring-finger
+{
+    animation-name: ring-twist;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#pink-finger
+{
+    animation-name: pink-twist;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+
+@keyframes hand-down
+{
+    from
+    {
+        transform: translateY(-100vh);
+    }
+    to 
+    {
+        transform: translateY(-15vh)
+    }
+}
+
+@keyframes hand-up
+{
+    from
+    {
+        transform: translateY(-15vh);
+    }
+    to 
+    {
+        transform: translateY(-100vh)
+    }
+}
+
+@keyframes hand-rotate
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes thumb-twist
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes index-twist
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes middle-twist
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes ring-twist
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes pink-twist
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(-5deg);
+    }
+}
