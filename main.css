@@ -5,22 +5,43 @@
     box-sizing: border-box;
 }
 
-body
+header
 {
-    overflow: hidden;
-}
-
-#svg-container
-{
+    width: 100%;
     height: 100vh;
 }
 
+#svg-apple, #svg-hand
+{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+
 #svg-hand
 {
+    z-index: 2;
+
     animation-name: hand-down, hand-up;
     animation-duration: 1.5s, 1s;
     animation-timing-function: ease-out;
     animation-delay: 0s, 2.1s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    transform-box: border-box;
+}
+
+#svg-apple
+{
+    z-index: 1;
+
+    animation-name: apple-up;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 2.1s;
     animation-fill-mode: forwards;
     transform-origin: center;
     transform-box: border-box;
@@ -92,6 +113,7 @@ body
     transform-box: fill-box;
 }
 
+/*----*/
 
 @keyframes hand-down
 {
@@ -101,7 +123,7 @@ body
     }
     to 
     {
-        transform: translateY(-15vh)
+        transform: translateY(0vh)
     }
 }
 
@@ -109,13 +131,26 @@ body
 {
     from
     {
-        transform: translateY(-15vh);
+        transform: translateY(0%);
     }
     to 
     {
-        transform: translateY(-100vh)
+        transform: translateY(-100%)
     }
 }
+
+@keyframes apple-up
+{
+    from
+    {
+        transform: translateY(0);
+    }
+    to 
+    {
+        transform: translateY(-100%)
+    }
+}
+
 
 @keyframes hand-rotate
 {
@@ -149,7 +184,7 @@ body
     }
     to 
     {
-        transform: rotate(20deg);
+        transform: rotate(22.5deg);
     }
 }
 
