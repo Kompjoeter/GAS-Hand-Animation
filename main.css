@@ -3,15 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 header
 {
+    position: relative;
     width: 100%;
     height: 100vh;
 }
 
-#svg-apple, #svg-hand
+#svg-apple, #svg-hand, #svg-landscape
 {
     position: absolute;
 
@@ -34,6 +36,7 @@ header
 
 #svg-apple
 {
+    transform: translate(.75%, 0%) rotate(5deg);
     z-index: 1;
 
     animation-name: apple-up;
@@ -45,8 +48,9 @@ header
     transform-box: border-box;
 }
 
-#fruit
+#apple
 {
+    
     animation-name: apple-rotate;
     animation-duration: .25s;
     animation-timing-function: ease-out;
@@ -54,6 +58,7 @@ header
     animation-fill-mode: forwards;
     transform-origin: center;
     transform-box: border-box;
+    
 }
 
 #hand
@@ -164,11 +169,11 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: translate(1.1%, 0%) rotate(5deg);
     }
     to
     {
-        transform: rotate(10deg);
+        transform: translate(-.4%, 0%) rotate(-2deg);
     }
 }
 
@@ -205,7 +210,7 @@ header
     }
     to 
     {
-        transform: rotate(22.5deg);
+        transform: rotate(25deg);
     }
 }
 
