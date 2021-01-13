@@ -173,7 +173,7 @@ header
     }
     to
     {
-        transform: translate(-.4%, 0%) rotate(-2deg);
+        transform: translate(0%, 0%) rotate(-2deg);
     }
 }
 
@@ -182,11 +182,11 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: rotate(20deg);
     }
     to 
     {
-        transform: rotate(-20deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -194,11 +194,11 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: rotate(20deg);
     }
     to 
     {
-        transform: rotate(-10deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -206,11 +206,11 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: rotate(-5deg);
     }
     to 
     {
-        transform: rotate(25deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -218,11 +218,11 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: rotate(-20deg);
     }
     to 
     {
-        transform: rotate(-20deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -230,11 +230,11 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: rotate(-5deg);
     }
     to 
     {
-        transform: rotate(-5deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -242,10 +242,10 @@ header
 {
     from
     {
-        transform: rotate(0deg);
+        transform: rotate(-5deg);
     }
     to 
     {
-        transform: rotate(-5deg);
+        transform: rotate(0deg);
     }
 }
