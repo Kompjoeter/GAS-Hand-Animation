@@ -1,57 +1,58 @@
-*
+* 
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 header
 {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    
 }
-
 
 .title-container
 {
-    display: flex;
-    
-    flex-wrap:nowrap;
-    width: fit-content;
-
-}
-#header-title
-{
-    white-space: nowrap;
-    
     position: absolute;
-    top: 50%;
     left: 50%;
-   
-
-    color: #54CA6E;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-    font-size: 3em;
-    opacity: 0;
-    text-align: center;
+    top: 45%;
     transform: translate(-50%, -50%);
+
+    opacity: 0;    
 
     animation-name: title-appear;
     animation-duration: 1.10s;
     animation-timing-function: ease-out;
-    animation-delay: 2.225s;
+    animation-delay: 2.31s;
     animation-fill-mode: forwards;
     transform-origin: center;
     transform-box: border-box;
+}
+
+#header-title
+{
+    white-space: nowrap;
+    
+    color: #54CA6E;
+    font-family: 'Titillium Web', sans-serif;
+
+    font-size: 3em;
+    word-break: break-all;
+    
+    text-align: center;
 
     z-index: 10;
 
 }
 
 #header-title span
+{
+    display: block;
+
+}
+
+#header-title span.red
 {
     color: #f76a6a;
 
@@ -69,86 +70,70 @@ header
     animation-name: line-appear;
     animation-duration: 1.75s;
     animation-timing-function: ease-in-out;
-    animation-delay: 3.5s;
+    animation-delay: 3.75s;
     animation-fill-mode: forwards;
     transform-origin: center;
     transform-box: border-box;
-
-    stroke-dasharray: 100%;
-    stroke-dashoffset: 100%;
-
 }
 
-#Sun
+
+.header-bg
 {
+    background-image: url('header.svg');
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+ 
 
-    animation-name: sun-radiate;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    transform-origin: center;
-    transform-box: border-box;
+    height: 100vh;
 }
 
-#clouds
+
+
+.svg-container
+{   
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        
+
+    
+}
+
+.svg-box
 {
-
-    animation-name: clouds-bounce;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transform-origin: center;
-    transform-box: border-box;
+    width: fit-content;
 }
 
-#WolkB,#WolkD
-{
-    animation-name: clouds-left-move;
-    animation-duration: 25s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: initial;
-    animation-direction: initial;
-    transform-origin: center;
-    transform-box: border-box;
-}
-
-
-#WolkA,#WolkC
-{
-    animation-name: clouds-right-move;
-    animation-duration: 25s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: initial;
-    animation-direction: initial;
-    transform-origin: center;
-    transform-box: border-box;
-}
-
-
-#svg-apple, #svg-hand, #svg-landscape
+#svg-main
 {
     position: absolute;
+    left: 50%;
+    bottom: 10%;
+    width: 90%;
+    height: auto;
+    transform: translateX(-50%);
+    
 
-    width: 100%;
-    height: 100%;
+    
+
+    overflow: visible;
 }
+
+
+
+/*----*/
+
+
 
 #svg-hand
 {
-    z-index: 2;
+    z-index: 3;
 
     animation-name: hand-down, hand-up;
-    animation-duration: 1.5s, 1s;
+    animation-duration: 1.5s, 2s;
     animation-timing-function: ease-out;
     animation-delay: 0s, 2.1s;
     animation-fill-mode: forwards;
@@ -158,11 +143,11 @@ header
 
 #svg-apple
 {
-    transform: translate(.75%, 0%) rotate(5deg);
+    transform: translate(1.1%, 0%) rotate(5deg);
     z-index: 1;
 
     animation-name: apple-up;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-delay: 2.1s;
     animation-fill-mode: forwards;
@@ -249,22 +234,7 @@ header
     transform-box: fill-box;
 }
 
-/*----*/
-
-
-@keyframes sun-radiate
-{
-    from
-    {
-        opacity: 100%;
-    }
-    to
-    {
-        opacity: 85%;
-    }
-}
-
-
+/*---*/
 @keyframes line-appear
 {
     
@@ -283,60 +253,20 @@ header
     }
     to
     {
-        top: 40%;
+        top: 45%;
         opacity: 100%;
     }
 }
-
-@keyframes clouds-bounce
-{
-
-    from
-    {
-        transform: translateY(+0vh);
-    }
-
-    to 
-    {
-        transform: translateY(+1vh);
-    }
-}
-
-
-@keyframes clouds-left-move
-{
-    from
-    {
-        transform: translateX(0vw);
-    }
-    to 
-    {
-        transform: translateX(-10vw)
-    }
-}
-
-@keyframes clouds-right-move
-{
-    from
-    {
-        transform: translateX(0vw);
-    }
-    to 
-    {
-        transform: translateX(10vw)
-    }
-}
-
 
 @keyframes hand-down
 {
     from
     {
-        transform: translateY(-100vh);
+        transform: translateY(-100%);
     }
     to 
     {
-        transform: translateY(0vh)
+        transform: translateY(0%)
     }
 }
 
@@ -348,7 +278,7 @@ header
     }
     to 
     {
-        transform: translateY(-100%)
+        transform: translateY(-250%)
     }
 }
 
@@ -360,7 +290,7 @@ header
     }
     to 
     {
-        transform: translateY(-100%)
+        transform: translateY(-250%)
     }
 }
 
@@ -447,4 +377,66 @@ header
     {
         transform: rotate(0deg);
     }
+}
+
+@media only screen and (min-width: 720px) 
+{
+    #svg-main
+    {
+        width: 50%;
+    }
+
+    #header-title span
+    {
+        display: inline;
+    }  
+}
+
+@media only screen and (min-width: 1440px) 
+{
+    .title-container
+    {
+        top: 37%;    
+    }
+
+    #header-title
+    {
+        font-size: 5em;
+    }
+
+    @keyframes title-appear
+{
+    from
+    {
+        top: 80%;
+        opacity: 0;
+    }
+    to
+    {
+        top: 37%;
+        opacity: 100%;
+    }
+}
+}
+
+@media only screen and (min-width: 2560px) 
+{
+    .title-container
+    {
+        top: 28%;
+    }
+
+    @keyframes title-appear
+{
+    from
+    {
+        top: 80%;
+        opacity: 0;
+    }
+    to
+    {
+        top: 28%;
+        opacity: 100%;
+    }
+}
 }
